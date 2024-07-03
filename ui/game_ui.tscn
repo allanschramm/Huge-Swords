@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://b06fr6j121esl"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_cr2sy"]
+[ext_resource type="Texture2D" uid="uid://l1rgj543luo6" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_tden3"]
+[ext_resource type="Texture2D" uid="uid://b4e60hvq2emdb" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_ehn6f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_js0yy"]
+texture = ExtResource("1_tden3")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="SystemFont" id="SystemFont_5wjgi"]
+font_names = PackedStringArray("Impact")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_nk3mm"]
+font = SubResource("SystemFont_5wjgi")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25qok"]
+atlas = ExtResource("3_ehn6f")
+region = Rect2(40, 56, 56, 40)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_cr2sy")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.5
+offset_top = 5.0
+offset_right = 21.5
+offset_bottom = 28.0
+grow_horizontal = 2
+text = "08:50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -184.0
+offset_bottom = 88.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_js0yy")
+
+[node name="MeatLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -37.0
+offset_right = 65.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "50
+"
+label_settings = SubResource("LabelSettings_nk3mm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -36.0
+offset_right = -3.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_25qok")

@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://cclsfdkd638po"]
+
+[ext_resource type="Texture2D" uid="uid://caor1yqktv3h3" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="1_5lrni"]
+[ext_resource type="Texture2D" uid="uid://cua3uxasiuihx" path="res://addons/Tiny Swords/Resources/Sheep/HappySheep_All.png" id="2_me6g3"]
+[ext_resource type="Texture2D" uid="uid://sta4km854d5d" path="res://addons/Tiny Swords/Resources/Sheep/HappySheep_Bouncing.png" id="3_p7hko"]
+[ext_resource type="Texture2D" uid="uid://des46f2rjt2xq" path="res://addons/Tiny Swords/Resources/Sheep/HappySheep_Idle.png" id="4_1xybt"]
+[ext_resource type="Texture2D" uid="uid://uljv1y0ta2l3" path="res://addons/Tiny Swords/Resources/Resources/G_Idle.png" id="5_k0apo"]
+[ext_resource type="Texture2D" uid="uid://e0n0mie718lo" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="6_4fpna"]
+[ext_resource type="Texture2D" uid="uid://daeq42ym3jl0o" path="res://addons/Tiny Swords/Resources/Resources/W_Spawn.png" id="7_mlmnm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PawnBlue" type="Sprite2D" parent="."]
+position = Vector2(592, 589)
+texture = ExtResource("1_5lrni")
+
+[node name="HappySheepAll" type="Sprite2D" parent="."]
+position = Vector2(1844, 212)
+texture = ExtResource("2_me6g3")
+
+[node name="HappySheepBouncing" type="Sprite2D" parent="."]
+position = Vector2(1720, 396)
+texture = ExtResource("3_p7hko")
+
+[node name="HappySheepIdle" type="Sprite2D" parent="."]
+position = Vector2(1848, 526)
+texture = ExtResource("4_1xybt")
+
+[node name="GIdle" type="Sprite2D" parent="."]
+position = Vector2(1381, 616)
+texture = ExtResource("5_k0apo")
+
+[node name="MSpawn" type="Sprite2D" parent="."]
+position = Vector2(1787, 750)
+texture = ExtResource("6_4fpna")
+
+[node name="WSpawn" type="Sprite2D" parent="."]
+position = Vector2(1878, 633)
+texture = ExtResource("7_mlmnm")
